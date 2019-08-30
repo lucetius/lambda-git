@@ -22,7 +22,7 @@ module.exports = function installGit(options) {
     var targetDirectory = options.targetDirectory || '/tmp/git'
     var updateEnv = (options.updateEnv !== undefined) ? options.updateEnv : true
 
-    var reader = fs.createReadStream(path.join(__dirname, 'git-2.4.3.tar'))
+    var reader = fs.createReadStream(path.join(__dirname, 'git-2.4.3-pcre.tar'))
     reader.pipe(tar.extract(targetDirectory))
     reader.on('end', done)
 
